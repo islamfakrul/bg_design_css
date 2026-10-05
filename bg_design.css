@@ -67,7 +67,6 @@
   border-radius:8px;background:var(--bg-ink);color:#fff;font-weight:800;font-size:.85rem}
 .bg-article .bg-award{display:inline-block;font-size:.74rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:#fff;
   background:linear-gradient(90deg,var(--bg-accent),var(--bg-accent-d));padding:6px 13px;border-radius:999px}
-.bg-article h3.bg-title{margin:.25em 0 .7em;font-size:1.35rem;line-height:1.3;font-weight:700;color:var(--bg-ink)}
 .bg-article .bg-top{display:flex;gap:18px;align-items:stretch;flex-wrap:wrap}
 .bg-article .bg-shot{flex:1 1 280px;max-width:420px;min-height:240px;background:#fff;border:1px solid var(--bg-line);border-radius:10px;
   padding:16px;display:flex;align-items:center;justify-content:center}
@@ -102,6 +101,12 @@
   padding:14px 18px;margin:18px 0;color:#5b4a2f;line-height:1.6}
 .bg-article .bg-bestfor strong{color:#a8761a}
 
+/* Review video: full card width, 16:9 (padding trick works on every browser/theme) */
+.bg-article .bg-video{position:relative;width:100%;max-width:760px;height:0;padding-top:56.25%;margin:0 auto;
+  border-radius:10px;overflow:hidden;background:#000}
+.bg-article .bg-video iframe{position:absolute;top:0;left:0;width:100%!important;height:100%!important;
+  max-width:none!important;margin:0!important;border:0}
+
 /* Gallery */
 .bg-article .bg-media{margin:18px 0 4px}
 .bg-article .bg-media-label{font-size:.78rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--bg-soft);margin:0 0 8px}
@@ -130,25 +135,6 @@
 .bg-article blockquote p{margin:0;font-size:1rem;line-height:1.7}
 .bg-article blockquote p+p{margin-top:.7em}
 
-/* ---------- Comparison table ---------- */
-.bg-article .bg-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.2em 0 1.6em;border:1px solid var(--bg-line);border-radius:10px}
-.bg-article .bg-table-wrap table{width:100%;min-width:620px;border-collapse:collapse;background:#fff;table-layout:auto;margin:0;border:0}
-.bg-article .bg-table-wrap th{background:#2c3e50;color:#fff;font-weight:600;text-align:left;padding:13px 16px;border:0;border-right:1px solid #3d5266;white-space:nowrap;font-size:.92rem}
-.bg-article .bg-table-wrap td{padding:12px 16px;border:0;border-top:1px solid #e4e4e4;border-right:1px solid #eee;vertical-align:top;line-height:1.5;font-size:.95rem}
-.bg-article .bg-table-wrap th:last-child,.bg-article .bg-table-wrap td:last-child{border-right:0}
-.bg-article .bg-table-wrap tbody tr:nth-child(even) td{background:#f8f9fa}
-.bg-article .bg-table-wrap tbody tr:hover td{background:#eef4fb}
-.bg-article .bg-table-wrap td:first-child{font-weight:700;color:var(--bg-ink);min-width:150px}
-.bg-article .bg-table-wrap td{min-width:110px}
-/* first column sticks while the rest scrolls sideways */
-.bg-article .bg-table-wrap th:first-child,.bg-article .bg-table-wrap td:first-child{position:sticky;left:0;z-index:1}
-.bg-article .bg-table-wrap td:first-child{background:#fff;box-shadow:2px 0 0 #eee}
-.bg-article .bg-table-wrap tbody tr:nth-child(even) td:first-child{background:#f8f9fa}
-.bg-article .bg-table-wrap th:first-child{z-index:2}
-.bg-article .bg-table-wrap::-webkit-scrollbar{height:9px}
-.bg-article .bg-table-wrap::-webkit-scrollbar-track{background:#f1f1f1}
-.bg-article .bg-table-wrap::-webkit-scrollbar-thumb{background:#b5b5b5;border-radius:5px}
-
 /* ---------- Tablet ---------- */
 @media (max-width:900px){
   .bg-article .bg-picks-head,
@@ -172,7 +158,6 @@
   .bg-article .bg-pick-cta .bg-btn{width:100%;padding:12px}
 
   .bg-article .bg-card{padding:16px;border-radius:12px}
-  .bg-article h3.bg-title{font-size:1.18rem}
   .bg-article .bg-shot{flex-basis:100%;max-width:100%;min-height:200px}
   .bg-article .bg-shot img{max-height:260px}
   .bg-article .bg-meta{flex-basis:100%}
@@ -182,6 +167,4 @@
   .bg-article .bg-gallery-main{height:260px}
   .bg-article .bg-thumb{width:54px;height:46px}
   .bg-article .bg-btn-buy{width:100%}
-  .bg-article .bg-table-wrap table{min-width:540px}
-  .bg-article .bg-table-wrap th,.bg-article .bg-table-wrap td{padding:10px 12px;font-size:.88rem}
 }
