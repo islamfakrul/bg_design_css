@@ -27,7 +27,7 @@
 /* ---------- Affiliate disclosure (top) + Amazon content notice (bottom) ---------- */
 .bg-article .bg-disclosure{font-size:.85rem;line-height:1.5;color:var(--bg-muted);background:var(--bg-panel);
   border:1px solid var(--bg-line);border-radius:8px;padding:10px 14px;margin:0 0 1.4em}
-.bg-article .bg-notice{font-size:.78rem;line-height:1.5;color:var(--bg-soft);margin:-1.4em 0 2em}
+.bg-article .bg-notice{font-size:.78rem;line-height:1.5;color:var(--bg-soft);margin:-1.4em 0 2em;text-align: center;}
 
 /* ---------- Shared buttons ---------- */
 .bg-article .bg-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
